@@ -1,0 +1,1 @@
+# training functions for the generator and the discriminator

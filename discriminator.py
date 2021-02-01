@@ -14,6 +14,6 @@ class Discriminator(nn.Module):
 								 nn.ReLU(inplace=True),
 								 nn.Linear(200, out),
                                  nn.Sigmoid())
-    def forward_pass(self, x):
+    def forward(self, x):
         x = self.net(x)
         return x

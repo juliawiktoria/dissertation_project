@@ -13,6 +13,6 @@ class Generator(nn.Module):
 								 nn.Linear(1000, 800),
 								 nn.ReLU(inplace=True),
 								 nn.Linear(800, out))
-	def forward_pass(self, x):
+	def forward(self, x):
 		x = self.net(x)
 		return x

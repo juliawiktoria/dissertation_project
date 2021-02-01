@@ -28,9 +28,9 @@ optimizer_d1 = optim.SGD(dis.parameters(), lr=0.001, momentum=0.9)
 criterion_d2 = nn.BCELoss()
 optimizer_d2 = optim.SGD(gen.parameters(), lr=0.001, momentum=0.9)
 
-printing_steps = 200
+printing_steps = 10
 
-epochs = 50
+epochs = 500
 
 # noise generating function
 def make_some_noise():

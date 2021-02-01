@@ -7,6 +7,7 @@ from torch.utils import data as t_data
 import torchvision.datasets as datasets
 from torchvision import transforms
 import matplotlib.pyplot as plt
+# import models
 import generator
 import discriminator
 
@@ -70,7 +71,7 @@ for epoch in range(epochs):
         
         inp_real_x = inp_real_x.reshape(4, 784)
         dis_real_out = dis(inp_real_x)
-        dis_real_loss = criterion_d1(dis_real_loss, Variable(torch.ones(batch_size, 1)))
+        dis_real_loss = criterion_d1(dis_real_out, Variable(torch.ones(batch_size, 1)))
         dis_real_loss.backward()
 
         # on generated data

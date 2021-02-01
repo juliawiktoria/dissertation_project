@@ -8,7 +8,7 @@ import torchvision.datasets as datasets
 from torchvision import transforms
 
 # class for the discriminator NN
-class Discriminator:
+class Discriminator(nn.Module):
     def __init__(self, inp, out):
         super(Discriminator, self).__init__()
 

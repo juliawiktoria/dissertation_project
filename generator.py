@@ -1,4 +1,3 @@
-import numpy as np
 import torch
 import torch.nn as nn
 
@@ -6,7 +5,7 @@ import torch.nn as nn
 class Generator(nn.Module):
 	def __init__(self, inp, out):
 		super(Generator, self).__init__()
-		
+
 		self.net = nn.Sequential(nn.Linear(inp, 300), 
 								 nn.ReLU(inplace=True),
 								 nn.Linear(300, 1000),
